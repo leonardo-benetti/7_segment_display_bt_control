@@ -12,5 +12,14 @@
         "target/esp32.cfg"
     ],
     "idf.pythonBinPathWin": "C:\\Users\\alema\\.espressif\\python_env\\idf5.0_py3.8_env\\Scripts\\python.exe",
-    "idf.toolsPathWin": "C:\\Users\\alema\\.espressif"
+    "idf.toolsPathWin": "C:\\Users\\alema\\.espressif",
+    "files.associations": {
+        "algorithm": "c",
+        "iterator": "c",
+        "xhash": "c",
+        "xmemory": "c",
+        "xtree": "c",
+        "xutility": "c"
+    },
+    "idf.portWin": "COM3"
 }

@@ -49,7 +49,7 @@ void app_main(void)
         if (num > 19)
             num = 0;
         
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
     
 }

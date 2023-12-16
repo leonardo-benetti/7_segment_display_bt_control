@@ -40,7 +40,8 @@ void init_display_pins(d7s_ios_num io_pins)
 
 void set_display_number(d7s_ios_num io_pins, uint8_t target_num)
 {
-    if (target_num > 15)
+    // displaying oly hex numbers (0-15)
+    if (target_num > 0xF)
     {
         gpio_set_level(io_pins.sega_io_num, LIGHT_DOWN);
         gpio_set_level(io_pins.segb_io_num, LIGHT_DOWN);
@@ -54,6 +55,7 @@ void set_display_number(d7s_ios_num io_pins, uint8_t target_num)
         return;
     }
 
+    // the following logic is based on https://electronics-fun.com/7-segment-hex-decoder/
     bool A, B, C, D, AC, BC, CC, DC;
     A = (target_num >> 3) & 0x1;
     AC = !A;

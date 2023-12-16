@@ -16,7 +16,7 @@ send signal from cellphone to esp32 to lightup 7-segment display
 #define D7S_PIN_E   21
 #define D7S_PIN_F   22
 #define D7S_PIN_G   23
-#define D7S_PIN_DP  3
+#define D7S_PIN_DP  27
 
 
 static d7s_ios_num pin_numbers = {

@@ -4,6 +4,15 @@
 #define LIGHT_UP 0
 #define LIGHT_DOWN 1
 
+/* pin diagram:
+
+    G F + A B
+    . . . . .
+
+    . . . . .
+    E D + C DP
+*/
+
 typedef struct
 {
     uint8_t sega_io_num;

@@ -50,6 +50,8 @@ void set_display_number(d7s_ios_num io_pins, uint8_t target_num)
         gpio_set_level(io_pins.segf_io_num, LIGHT_DOWN);
         gpio_set_level(io_pins.segg_io_num, LIGHT_DOWN);
         gpio_set_level(io_pins.segdp_io_num, LIGHT_UP);
+
+        return;
     }
 
     bool A, B, C, D, AC, BC, CC, DC;
@@ -69,7 +71,7 @@ void set_display_number(d7s_ios_num io_pins, uint8_t target_num)
         gpio_set_level(io_pins.sega_io_num, LIGHT_DOWN);
     
     // condition to light b
-    if ( (AC & CC & DC) | (AC & C & D) | (A & CC & D) | (BC & CC) )
+    if ( (AC & CC & DC) | (AC & C & D) | (A & CC & D) | (BC & CC) | (BC * DC) )
         gpio_set_level(io_pins.segb_io_num, LIGHT_UP);
     else
         gpio_set_level(io_pins.segb_io_num, LIGHT_DOWN);

@@ -55,6 +55,8 @@ void set_display_number(d7s_ios_num io_pins, uint8_t target_num)
         return;
     }
 
+    gpio_set_level(io_pins.segdp_io_num, LIGHT_DOWN);
+
     // the following logic is based on https://electronics-fun.com/7-segment-hex-decoder/
     bool A, B, C, D, AC, BC, CC, DC;
     A = (target_num >> 3) & 0x1;

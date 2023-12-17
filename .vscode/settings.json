@@ -19,7 +19,13 @@
         "xhash": "c",
         "xmemory": "c",
         "xtree": "c",
-        "xutility": "c"
+        "xutility": "c",
+        "esp_bt.h": "c",
+        "bt_app_av.h": "c",
+        "esp_gap_bt_api.h": "c",
+        "esp_a2dp_api.h": "c",
+        "7-segment-display.h": "c",
+        "esp_avrc_api.h": "c"
     },
     "idf.portWin": "COM3",
     "idf.flashType": "UART"
